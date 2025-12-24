@@ -15,24 +15,56 @@ body {
     font-family: 'Open Sans', sans-serif;
     background: #050102;
     color: #f5eee6;
+    overflow-x: hidden;
 }
 
 section {
-    padding: 80px 20px;
+    padding: 90px 20px;
+    position: relative;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* BACKGROUND SILHOUETTES */
+.silhouette-left,
+.silhouette-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.silhouette-left {
+    left: -5%;
+    background-position: left center;
+    background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 900'>\
+<path d='M150 0 C120 100 180 200 140 300 C100 400 160 500 130 650 C110 750 150 850 170 900' \
+stroke='%23d6b37c' stroke-width='4' fill='none'/>\
+</svg>");
+}
+
+.silhouette-right {
+    right: -5%;
+    background-position: right center;
+    background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 900'>\
+<path d='M150 0 C180 100 120 200 160 300 C200 400 140 500 170 650 C190 750 150 850 130 900' \
+stroke='%23d6b37c' stroke-width='4' fill='none'/>\
+</svg>");
 }
 
 /* HERO */
 .hero {
-    background:
-      linear-gradient(rgba(5,1,2,0.75), rgba(5,1,2,0.9)),
-      url("https://images.unsplash.com/photo-1544005313-94ddf0286df2");
-    background-size: cover;
-    background-position: center;
     text-align: center;
 }
 
@@ -44,45 +76,33 @@ section {
 
 .hero p {
     font-size: 20px;
-    line-height: 1.6;
-    max-width: 720px;
-    margin: auto;
+    line-height: 1.7;
     color: #e6d3b1;
 }
 
-/* SECTION TITLES */
+/* SECTION TITLE */
 .section-title {
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: 38px;
+    font-size: 36px;
     margin-bottom: 60px;
     color: #d6b37c;
 }
 
-/* PROGRAMS */
+/* PROGRAM */
 .program {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 80px;
-    align-items: center;
-}
-
-.program img {
-    width: 100%;
-    border-radius: 16px;
-    filter: brightness(0.9);
+    margin-bottom: 60px;
 }
 
 .program h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 10px;
 }
 
 .price {
     color: #d6b37c;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 15px;
 }
 
@@ -91,38 +111,27 @@ section {
 }
 
 .program li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     line-height: 1.6;
 }
 
 /* ADDONS */
 .addons {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.8;
 }
 
 /* CTA */
 .cta {
-    background:
-      linear-gradient(rgba(5,1,2,0.8), rgba(5,1,2,0.95)),
-      url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e");
-    background-size: cover;
-    background-position: center;
     text-align: center;
 }
 
-.cta h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
 .qr {
-    display: inline-block;
     margin-top: 30px;
     padding: 40px;
     border: 1px dashed #d6b37c;
+    display: inline-block;
     color: #d6b37c;
 }
 
@@ -130,14 +139,15 @@ section {
 .footer {
     text-align: center;
     font-size: 12px;
-    opacity: 0.7;
+    opacity: 0.6;
     padding-bottom: 40px;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .program {
-        grid-template-columns: 1fr;
+    .silhouette-left,
+    .silhouette-right {
+        display: none;
     }
 
     .hero h1 {
@@ -149,120 +159,97 @@ section {
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
+<section>
+  <div class="silhouette-left"></div>
+  <div class="silhouette-right"></div>
+
+  <div class="container hero">
     <h1>Luna’s Private Dance Experience</h1>
     <p>
-      Close the door behind you. Slow the world down.<br><br>
-      You’ve discovered a private one-on-one dance experience created for men
-      who appreciate beauty, discretion, and intimacy.<br><br>
-      This is not a public show. Every movement is for you.
+      A private one-on-one dance experience created for men who appreciate elegance,
+      discretion and sensual connection.<br><br>
+      No audience. No rush. Only your moment.
     </p>
   </div>
 </section>
 
-<!-- PROGRAMS -->
 <section>
+  <div class="silhouette-left"></div>
+  <div class="silhouette-right"></div>
+
   <div class="container">
     <div class="section-title">Private Dance Programs</div>
 
     <div class="program">
-      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb">
-      <div>
-        <h3>🌺 Soft Tease</h3>
-        <div class="price">3,000 THB · 10 minutes (2 songs)</div>
-        <ul>
-          <li>Topless private dance</li>
-          <li>Sensual movements, slow pace</li>
-          <li>Visual pleasure only</li>
-          <li>No touching</li>
-        </ul>
-      </div>
+      <h3>🌺 Soft Tease</h3>
+      <div class="price">3,000 THB · 10 minutes (2 songs)</div>
+      <ul>
+        <li>Topless private dance</li>
+        <li>Slow, sensual movements</li>
+        <li>Visual pleasure only</li>
+        <li>No touching</li>
+      </ul>
     </div>
 
     <div class="program">
-      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
-      <div>
-        <h3>🔥 Full Reveal</h3>
-        <div class="price">4,000 THB · 10 minutes (2 songs)</div>
-        <ul>
-          <li>Fully nude dance</li>
-          <li>Elegant and confident performance</li>
-          <li>Visual experience</li>
-          <li>No touching</li>
-        </ul>
-      </div>
+      <h3>🔥 Full Reveal</h3>
+      <div class="price">4,000 THB · 10 minutes (2 songs)</div>
+      <ul>
+        <li>Fully nude dance</li>
+        <li>Elegant visual performance</li>
+        <li>No touching</li>
+      </ul>
     </div>
 
     <div class="program">
-      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
-      <div>
-        <h3>💎 Interactive Touch</h3>
-        <div class="price">5,000 THB · 15 minutes (3 songs)</div>
-        <ul>
-          <li>Fully nude</li>
-          <li>Touch is allowed</li>
-          <li>Guided interaction</li>
-          <li>Close personal connection</li>
-        </ul>
-      </div>
+      <h3>💎 Interactive Touch</h3>
+      <div class="price">5,000 THB · 15 minutes (3 songs)</div>
+      <ul>
+        <li>Fully nude</li>
+        <li>Touch allowed</li>
+        <li>Close personal interaction</li>
+      </ul>
     </div>
 
     <div class="program">
-      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2">
-      <div>
-        <h3>🌋 Deep Intimacy</h3>
-        <div class="price">7,000 THB · 20 minutes (4 songs)</div>
-        <ul>
-          <li>Fully nude</li>
-          <li>Full interaction</li>
-          <li>Deep relaxation experience</li>
-          <li>Intimate finale</li>
-        </ul>
-      </div>
+      <h3>🌋 Deep Intimacy</h3>
+      <div class="price">7,000 THB · 20 minutes (4 songs)</div>
+      <ul>
+        <li>Fully nude</li>
+        <li>Full interaction</li>
+        <li>Intimate finale</li>
+      </ul>
     </div>
 
     <div class="program">
-      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
-      <div>
-        <h3>✨ Ultimate Fantasy</h3>
-        <div class="price">10,000 THB · 20 minutes (4 songs)</div>
-        <ul>
-          <li>Everything from Deep Intimacy</li>
-          <li>Exclusive solo performance</li>
-          <li>Live private fantasy show</li>
-          <li>Maximum closeness and visual pleasure</li>
-        </ul>
-      </div>
+      <h3>✨ Ultimate Fantasy</h3>
+      <div class="price">10,000 THB · 20 minutes (4 songs)</div>
+      <ul>
+        <li>Everything from Deep Intimacy</li>
+        <li>Exclusive private solo performance</li>
+        <li>Live fantasy experience</li>
+      </ul>
     </div>
 
   </div>
 </section>
 
-<!-- ADDONS -->
 <section>
   <div class="container addons">
-    🔮 Extra song: <strong>+1,000 THB</strong><br>
-    Fetishes & personal requests are discussed privately and priced individually.<br>
-    Discretion and mutual respect guaranteed.
+    Extra song: <strong>+1,000 THB</strong><br>
+    Fetishes & personal requests are discussed privately.
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
   <div class="container">
     <h2>The next move is yours</h2>
-    <p>When you are ready, you already know where to find me.</p>
-
-    <div class="qr">
-      PLACE YOUR QR CODE HERE
-    </div>
+    <div class="qr">PLACE YOUR QR CODE HERE</div>
   </div>
 </section>
 
 <div class="footer">
-  Private experience for discerning gentlemen · Respect & discretion required
+  Private experience · Respect & discretion required
 </div>
 
 </body>
