@@ -3,205 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luna's Secret Garden</title>
+<title>Luna’s Private Dance Experience</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+* { box-sizing: border-box; }
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background: radial-gradient(circle at top, #2b0a12, #050102);
-    color: #f5e9dc;
+    background: #050102;
+    color: #f5eee6;
+}
+
+section {
+    padding: 80px 20px;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
-    padding: 60px 20px;
 }
 
-h1 {
+/* HERO */
+.hero {
+    background:
+      linear-gradient(rgba(5,1,2,0.75), rgba(5,1,2,0.9)),
+      url("https://images.unsplash.com/photo-1544005313-94ddf0286df2");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 52px;
-    text-align: center;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
-h2 {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    font-weight: 400;
-    margin-bottom: 50px;
-    color: #d6b37c;
-}
-
-.intro {
-    font-family: 'Playfair Display', serif;
+.hero p {
     font-size: 20px;
-    line-height: 1.7;
-    text-align: center;
-    margin-bottom: 80px;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: auto;
+    color: #e6d3b1;
 }
 
+/* SECTION TITLES */
 .section-title {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 60px;
     color: #d6b37c;
 }
 
-.card {
-    background: rgba(0,0,0,0.45);
-    border: 1px solid rgba(214,179,124,0.4);
-    border-radius: 14px;
-    padding: 30px;
-    margin-bottom: 30px;
+/* PROGRAMS */
+.program {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+    align-items: center;
 }
 
-.card h3 {
+.program img {
+    width: 100%;
+    border-radius: 16px;
+    filter: brightness(0.9);
+}
+
+.program h3 {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
     margin-bottom: 10px;
 }
 
 .price {
-    font-size: 22px;
     color: #d6b37c;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
-.card ul {
+.program ul {
     padding-left: 18px;
 }
 
-.card li {
+.program li {
     margin-bottom: 10px;
     line-height: 1.6;
 }
 
-.custom {
+/* ADDONS */
+.addons {
     text-align: center;
     font-size: 20px;
-    margin-top: 70px;
+    line-height: 1.8;
 }
 
+/* CTA */
 .cta {
+    background:
+      linear-gradient(rgba(5,1,2,0.8), rgba(5,1,2,0.95)),
+      url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e");
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    margin-top: 80px;
-    font-size: 22px;
+}
+
+.cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .qr {
+    display: inline-block;
     margin-top: 30px;
     padding: 40px;
     border: 1px dashed #d6b37c;
-    display: inline-block;
+    color: #d6b37c;
 }
 
+/* FOOTER */
 .footer {
-    margin-top: 80px;
-    font-size: 12px;
     text-align: center;
+    font-size: 12px;
     opacity: 0.7;
+    padding-bottom: 40px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .program {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Luna’s Private Dance Experience</h1>
+    <p>
+      Close the door behind you. Slow the world down.<br><br>
+      You’ve discovered a private one-on-one dance experience created for men
+      who appreciate beauty, discretion, and intimacy.<br><br>
+      This is not a public show. Every movement is for you.
+    </p>
+  </div>
+</section>
 
-<h1>Luna's Secret Garden</h1>
-<h2>Where Fantasy Becomes Your Reality</h2>
+<!-- PROGRAMS -->
+<section>
+  <div class="container">
+    <div class="section-title">Private Dance Programs</div>
 
-<div class="intro">
-Close your eyes for a moment. Imagine the intoxicating rhythm of music, the play of light and shadow, and an energy so charged it makes the air tremble.  
-<br><br>
-This is not just a dance. This is a private journey where you are the sole focus.  
-Let go of the world outside. Step into my garden.
-<br><br>
-<strong>Are you ready to turn the key?</strong>
-</div>
+    <div class="program">
+      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb">
+      <div>
+        <h3>🌺 Soft Tease</h3>
+        <div class="price">3,000 THB · 10 minutes (2 songs)</div>
+        <ul>
+          <li>Topless private dance</li>
+          <li>Sensual movements, slow pace</li>
+          <li>Visual pleasure only</li>
+          <li>No touching</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="section-title">Your Exclusive Collection</div>
+    <div class="program">
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+      <div>
+        <h3>🔥 Full Reveal</h3>
+        <div class="price">4,000 THB · 10 minutes (2 songs)</div>
+        <ul>
+          <li>Fully nude dance</li>
+          <li>Elegant and confident performance</li>
+          <li>Visual experience</li>
+          <li>No touching</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="card">
-<h3>🌺 The Blossom</h3>
-<div class="price">3,000 THB</div>
-<ul>
-<li>10 Minutes / 2 Songs of intimate, close-proximity dance</li>
-<li>Topless revelation</li>
-<li>Look, but don't touch</li>
-<li>A refined tease for true connoisseurs</li>
-</ul>
-</div>
+    <div class="program">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+      <div>
+        <h3>💎 Interactive Touch</h3>
+        <div class="price">5,000 THB · 15 minutes (3 songs)</div>
+        <ul>
+          <li>Fully nude</li>
+          <li>Touch is allowed</li>
+          <li>Guided interaction</li>
+          <li>Close personal connection</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="card">
-<h3>🔥 The Ember</h3>
-<div class="price">4,000 THB</div>
-<ul>
-<li>10 Minutes / 2 Songs</li>
-<li>Fully nude performance</li>
-<li>Visual ecstasy, no touching</li>
-<li>For those who dare to stare</li>
-</ul>
-</div>
+    <div class="program">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2">
+      <div>
+        <h3>🌋 Deep Intimacy</h3>
+        <div class="price">7,000 THB · 20 minutes (4 songs)</div>
+        <ul>
+          <li>Fully nude</li>
+          <li>Full interaction</li>
+          <li>Deep relaxation experience</li>
+          <li>Intimate finale</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="card">
-<h3>💎 The Jewel</h3>
-<div class="price">5,000 THB</div>
-<ul>
-<li>15 Minutes / 3 Songs</li>
-<li>Fully nude & interactive</li>
-<li>Your hands follow the music</li>
-<li>Luxury without distance</li>
-</ul>
-</div>
+    <div class="program">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+      <div>
+        <h3>✨ Ultimate Fantasy</h3>
+        <div class="price">10,000 THB · 20 minutes (4 songs)</div>
+        <ul>
+          <li>Everything from Deep Intimacy</li>
+          <li>Exclusive solo performance</li>
+          <li>Live private fantasy show</li>
+          <li>Maximum closeness and visual pleasure</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="card">
-<h3>🌋 The Volcano</h3>
-<div class="price">7,000 THB</div>
-<ul>
-<li>20 Minutes / 4 Songs</li>
-<li>Fully nude & fully interactive</li>
-<li>Total immersion and release</li>
-<li>The experience that concludes</li>
-</ul>
-</div>
+  </div>
+</section>
 
-<div class="card">
-<h3>✨ The Supernova</h3>
-<div class="price">10,000 THB</div>
-<ul>
-<li>Everything from "The Volcano"</li>
-<li>Exclusive solo pleasure performance</li>
-<li>Raw, real, unforgettable</li>
-<li>Your most private film — live</li>
-</ul>
-</div>
+<!-- ADDONS -->
+<section>
+  <div class="container addons">
+    🔮 Extra song: <strong>+1,000 THB</strong><br>
+    Fetishes & personal requests are discussed privately and priced individually.<br>
+    Discretion and mutual respect guaranteed.
+  </div>
+</section>
 
-<div class="custom">
-🔮 <strong>Beyond the Menu</strong><br><br>
-Extra song: +1,000 THB<br>
-Custom fantasies & fetishes — discussed privately
-</div>
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>The next move is yours</h2>
+    <p>When you are ready, you already know where to find me.</p>
 
-<div class="cta">
-<strong>The next move is yours.</strong><br><br>
-Scan & save discreetly
-<br><br>
-<div class="qr">
-PLACE YOUR QR CODE HERE
-</div>
-</div>
+    <div class="qr">
+      PLACE YOUR QR CODE HERE
+    </div>
+  </div>
+</section>
 
 <div class="footer">
-Private & discreet experience for discerning gentlemen.  
-Respect, cleanliness & mutual consent required.
+  Private experience for discerning gentlemen · Respect & discretion required
 </div>
 
-</div>
 </body>
 </html>
